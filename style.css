@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: floralwhite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  color: crimson;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.wrapper {
+  width: 50rem;
+  height: 45rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.palette-container {
+  width: 50rem;
+  height: 45rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  margin: auto;
+  display: flex;
+  border-bottom: 1px solid #333;
+}
+.palette-container > :first-child {
+  border-top-left-radius: 3rem;
+}
+
+.palette-container > :last-child {
+  border-top-right-radius: 3rem;
+}
+
+.palette {
+  height: 100%;
+  /* border: 1px solid #333; */
+  flex: 1;
+  transition: flex 0.3s ease-in;
+  position: relative;
+}
+
+.color-code {
+  position: absolute;
+  bottom: 1rem;
+  padding-left: 0.5rem;
+  background: white;
+  width: 100%;
+  font-size: 1.7rem;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.active {
+  opacity: 1;
+}
+
+.palette:hover {
+  flex: 3;
+  cursor: pointer;
+}
+
+.bottom-part {
+  width: 100%;
+}
+
+.btn-change {
+  padding: 1rem 3rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+}
