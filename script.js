@@ -8,18 +8,6 @@ window.addEventListener('load', function () {
   palettes.forEach(palette => changeHex(palette));
 });
 
-palettesContainer.addEventListener('mouseover', e => {
-  if (e.target.classList.contains('palette')) {
-    e.target.querySelector('p').classList.add('active');
-  }
-});
-
-palettesContainer.addEventListener('mouseout', e => {
-  if (e.target.classList.contains('palette')) {
-    e.target.querySelector('p').classList.remove('active');
-  }
-});
-
 const changeHex = function (el) {
   let finalValue = '#';
   const values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
