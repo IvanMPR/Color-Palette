@@ -113,13 +113,13 @@ i:active {
   margin-top: 0.5rem;
   width: 100%;
   cursor: pointer;
-  border: 1px solid #333;
+  border: 1px solid crimson;
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
   transition: all 0.3s;
   font-size: 1.6rem;
-  background: #fff;
-  color: #333;
+  background: floralwhite;
+  color: crimson;
   text-transform: uppercase;
 }
 
