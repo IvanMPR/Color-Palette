@@ -3,6 +3,9 @@
 const button = document.querySelector('.btn-change');
 const palettes = document.querySelectorAll('.palette');
 const palettesContainer = document.querySelector('.palette-container');
+const copyButtons = document.querySelectorAll('.copy');
+const successfulCopyH3 = document.querySelector('h3');
+const sound = new Audio('sounds/171697__nenadsimic__menu-selection-click.wav');
 
 window.addEventListener('load', function () {
   palettes.forEach(palette => changeHex(palette));
@@ -20,4 +23,24 @@ const changeHex = function (el) {
 
 button.addEventListener('click', () => {
   palettes.forEach(palette => changeHex(palette));
+});
+
+palettesContainer.addEventListener('click', function (e) {
+  if (!e.target.classList.contains('fa-copy')) return;
+  const colorCode = e.target
+    .closest('.text-container')
+    .querySelector('.color-code').textContent;
+  // Store colorCode in temporary input el, to be able to select it
+  const tempInput = document.createElement('input');
+  tempInput.value = colorCode;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  sound.play();
+  successfulCopyH3.classList.toggle('hidden');
+  setTimeout(() => {
+    successfulCopyH3.classList.toggle('hidden');
+  }, 500);
+  // Delete temporary input element
+  document.body.removeChild(tempInput);
 });
