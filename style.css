@@ -113,20 +113,20 @@ i:active {
   margin-top: 0.5rem;
   width: 100%;
   cursor: pointer;
-  border: 1px solid crimson;
+  border: 1px solid #333;
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
   transition: all 0.3s;
   font-size: 1.6rem;
   background: #fff;
-  color: crimson;
+  color: #333;
   text-transform: uppercase;
 }
 
 .btn-change:hover {
-  background: #fff;
-  /* color: crimson; */
+  background: crimson;
+  color: #fff;
 }
 .btn-change:active {
-  transform: translateY(2px);
+  transform: translateY(1px);
 }
