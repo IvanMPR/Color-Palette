@@ -3,7 +3,6 @@
 const button = document.querySelector('.btn-change');
 const palettes = document.querySelectorAll('.palette');
 const palettesContainer = document.querySelector('.palette-container');
-const copyButtons = document.querySelectorAll('.copy');
 const successfulCopyH3 = document.querySelector('h3');
 const sound = new Audio('sounds/171697__nenadsimic__menu-selection-click.wav');
 const nextPaletteSound = new Audio('sounds/320181__dland__hint.wav');
