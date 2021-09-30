@@ -6,6 +6,7 @@ const palettesContainer = document.querySelector('.palette-container');
 const copyButtons = document.querySelectorAll('.copy');
 const successfulCopyH3 = document.querySelector('h3');
 const sound = new Audio('sounds/171697__nenadsimic__menu-selection-click.wav');
+const nextPaletteSound = new Audio('sounds/320181__dland__hint.wav');
 
 window.addEventListener('load', function () {
   palettes.forEach(palette => changeHex(palette));
@@ -23,6 +24,7 @@ const changeHex = function (el) {
 
 button.addEventListener('click', () => {
   palettes.forEach(palette => changeHex(palette));
+  nextPaletteSound.play();
 });
 
 palettesContainer.addEventListener('click', function (e) {
@@ -40,7 +42,7 @@ palettesContainer.addEventListener('click', function (e) {
   successfulCopyH3.classList.toggle('hidden');
   setTimeout(() => {
     successfulCopyH3.classList.toggle('hidden');
-  }, 500);
+  }, 800);
   // Delete temporary input element
   document.body.removeChild(tempInput);
 });
