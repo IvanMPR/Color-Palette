@@ -13,8 +13,8 @@ body {
   height: 100vh;
   background: floralwhite;
   font-family: Arial, Helvetica, sans-serif;
-  /* overflow: hidden; */
 }
+
 h1 {
   font-size: 3rem;
   color: crimson;
